@@ -6,6 +6,7 @@ const hbs = require('hbs')
 
 
 const app = express()
+const port = process.env.PORT || 3000
 // Define path for Express config
 pubPath = path.join(__dirname,'../public')
 viewsPath = path.join(__dirname,'../templates/views')
@@ -93,6 +94,6 @@ app.get('*', (req,res)=>{
         name:'Sayantika'
     })
 })
-app.listen(3000,()=>{
-    console.log("The server is up and running")
+app.listen(port,()=>{
+    console.log("The server is up and running at port " + port)
 })
